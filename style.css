@@ -1,0 +1,148 @@
+:root {
+    --ff-lexa: "Lexend Deca", sans-serif;
+    --ff-shoulders: "Big Shoulders Display", sans-serif;
+
+    --fw-normal: 400;
+    --fw-bold: 700;
+
+    --clr-primary-orange: hsl(31, 77%, 52%);
+    --clr-primary-cyan: hsl(184, 100%, 22%);
+    --clr-primary-dark-cyan: hsl(179, 100%, 13%);
+
+    --clr-neutral-grey: hsla(0, 0%, 100%, 0.75);
+    --clr-neutral-white: hsl(0, 0%, 95%);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+  padding: .75rem 0;
+}
+
+body{
+  display: grid;
+  place-content: center;
+  margin: 4rem 1.5rem;
+  min-height: 100vh;
+}
+
+.wrapper {
+  display: grid;
+  font-family: var(--ff-lexa);
+  font-weight: var(--fw-normal);
+  border-radius: 0.5rem;
+  color: var(--clr-neutral-grey);
+  overflow: hidden;
+  min-width: 375px;
+}
+
+.car-type {
+  font-family: var(--ff-shoulders);
+  font-weight: var(--fw-bold);
+  font-size: 2.2rem;
+  color: var(--clr-neutral-white);
+  text-transform: uppercase;
+}
+
+.description {
+  line-height: 1.6rem;
+}
+
+.sedan {
+  background-color: var(--clr-primary-orange);
+  padding: 2rem 3.5rem;
+}
+
+.suv {
+  background-color: var(--clr-primary-cyan);
+  padding: 2rem 3.5rem;
+}
+
+.luxury {
+  background-color: var(--clr-primary-dark-cyan);
+  padding: 2rem 3.5rem;
+}
+
+button {
+  border: 2px solid transparent;
+  font-family: var(--ff-lexa);
+  font-weight: var(--fw-bold);
+  border-radius: 2rem;
+  background-color: var(--clr-neutral-white);
+  padding: .75rem;
+  width: 9rem;
+  margin: .75rem 0;
+}
+
+button:hover {
+  cursor: pointer;
+  border: 2px solid var(--clr-neutral-white);
+  color: var(--clr-neutral-white);
+}
+
+.sedan button {
+  color: var(--clr-primary-orange);
+}
+
+.sedan button:hover {
+  background-color: var(--clr-primary-orange);
+  color: var(--clr-neutral-white);
+}
+
+.suv button {
+  color: var(--clr-primary-cyan);
+}
+
+.suv button:hover {
+  background-color: var(--clr-primary-cyan);
+  color: var(--clr-neutral-white);
+}
+
+.luxury button {
+  color: var(--clr-primary-dark-cyan)
+}
+
+.luxury button:hover {
+  background-color: var(--clr-primary-dark-cyan);
+  color: var(--clr-neutral-white);
+}
+
+.attribution { 
+  font-size: 0.9rem; 
+  text-align: center; 
+}
+
+.attribution a { 
+  color: hsl(228, 45%, 44%); 
+}
+
+@media (min-width: 900px) {
+  .wrapper {
+    grid-template-columns: 1fr 1fr 1fr;
+    max-width: 850px;
+  }
+  button {
+    margin-top: 4rem;
+  }
+  .sedan{
+    padding: 2rem 2rem;
+  }
+  .suv{
+    padding: 2rem 2rem;
+  }
+  .luxury{
+    padding: 2rem 2rem;
+  }
+  body {
+    margin: 0;
+  }
+ 
+}
